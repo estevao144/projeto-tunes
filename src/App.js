@@ -1,5 +1,4 @@
 import React from 'react';
-// import{ ReactDOM } from "react-dom";
 import Content from './pages/Content';
 import LinkBar from './pages/LinkBar';
 

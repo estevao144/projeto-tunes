@@ -17,7 +17,7 @@ class Content extends React.Component {
         <Route exact path="/favorites" component={ Favorites } />
         <Route exact path="/profile" component={ Profile } />
         <Route exact path="/profile/edit" component={ ProfileEdit } />
-        <Route path="" component={ NotFound } />
+        <Route exact path="" component={ NotFound } />
         <Route exact path="/search" component={ Search } />
       </switch>
     );
