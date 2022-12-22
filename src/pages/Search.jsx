@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Loading from './Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import CardAlbum from './CardAlbum';
+import '../styles/search.css';
 
 class Search extends React.Component {
   state = {
@@ -33,12 +34,12 @@ class Search extends React.Component {
     const minName = 2;
     const { artista, loading, albums, bandaArtista } = this.state;
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="page-search">
         <Header />
         {loading ? (
           <Loading />
         ) : (
-          <form>
+          <form className="form">
             <label className="" htmlFor="artist" value="">
               <input
                 data-testid="search-artist-input"
@@ -51,6 +52,7 @@ class Search extends React.Component {
             </label>
             <div>
               <button
+                className="button-search"
                 data-testid="search-artist-button"
                 disabled={ artista.length < minName }
                 type="submit"
@@ -62,13 +64,12 @@ class Search extends React.Component {
             </div>
           </form>
         )}
-        <section>
-          { !albums.length ? 'Nenhum álbum foi encontrado' : (
+        <section className="section-card">
+          { !albums.length ? 'Nenhum álbum foi encontrado.' : (
             <span>
               {`Resultado de álbuns de: ${bandaArtista}`}
             </span>
           )}
-          ;
 
           { albums.map(
             (element) => (
@@ -77,7 +78,6 @@ class Search extends React.Component {
               </div>
             ),
           )}
-          ;
         </section>
       </div>
     );
