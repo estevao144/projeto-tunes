@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import '../styles/login.css';
 
 class Login extends React.Component {
   state = {
@@ -29,31 +30,35 @@ class Login extends React.Component {
     if (loading) return <Loading />;
     if (!loading && login) return <Redirect to="/search" />;
     return (
-      <div data-testid="page-login">
-        <form>
-          <label className="" htmlFor="name" value="">
-            Nome:
+      <div
+        data-testid="page-login"
+        className="page-login"
+      >
+        <h1>[]Tunes</h1>
+        <div className="div-redonda">
+          <form className="form">
+            <span className="name-login"> Nome:</span>
             <input
               data-testid="login-name-input"
-              name="name"
               type="text"
-              id="input-name"
+              className="input-name"
               placeholder=""
               onChange={ this.handleChange }
             />
-          </label>
-          <div>
+
             <button
               data-testid="login-submit-button"
               disabled={ nome.length < minName }
               onClick={ this.handleClick }
+              className="button-login"
               type="submit"
               id="submit-btn"
             >
               Entrar
             </button>
-          </div>
-        </form>
+
+          </form>
+        </div>
       </div>
     );
   }
