@@ -26,19 +26,19 @@ class Header extends React.Component {
   render() {
     const { usuario, loading } = this.state;
     return (
-      <header data-testid="header-component">
-        <nav>
+      <header className="header-h" data-testid="header-component">
+        <nav className="options-nav">
           <Link to="/search" data-testid="link-to-search">
-            Pesquisa
+            <button className="btn-header" type="submit">Pesquisa</button>
           </Link>
           <Link to="/favorites" data-testid="link-to-favorites">
-            Favoritos
+            <button type="submit" className="btn-header">Favoritos</button>
           </Link>
           <Link to="/profile" data-testid="link-to-profile">
-            Perfil
+            <button type="submit" className="btn-header">Perfil</button>
           </Link>
         </nav>
-        <div data-testid="header-user-name">
+        <div className="loading-h" data-testid="header-user-name">
           {loading ? <Loading /> : `Bem vindo ${usuario.name}`}
         </div>
       </header>

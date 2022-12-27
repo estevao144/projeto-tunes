@@ -1,0 +1,41 @@
+.header-h {
+    background-color: rgb(255, 251, 251);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: right;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+.options-nav {
+    background-color: #F3ECB0;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-header {
+    font-size: medium;
+    margin: 0 15px;
+    border: none;
+    color: white;
+    background-color: #344D67;
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+ }
+
+.loading-h {
+    padding-top: 15px;
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
